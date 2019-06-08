@@ -1,0 +1,35 @@
+/*#include<cstdio>
+#include<cstring>
+
+#include<algorithm>
+#include<cmath>*/
+#include<stdio.h>
+#include<iostream>
+using namespace std;
+int n,dp[1005],ma=0,date[1005];
+void LIS()
+{
+	dp[0]=1;
+	for(int i=1;i<=n;i++)
+	{
+		dp[i]=1;
+		for(int j=0;j<i;j++)
+		{
+			if(dp[j]+1>dp[i]&&date[j]<date[i])
+			{
+				dp[i]=dp[j]+1;
+			}
+		}
+		if(dp[i]>ma)
+			ma=dp[i];
+	}
+}
+int main()
+{
+	cin>>n;
+	for(int i=0;i<n;i++)
+		cin>>date[i];
+	LIS();
+	cout<<ma;
+	return 0;
+}
