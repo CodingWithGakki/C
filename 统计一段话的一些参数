@@ -1,0 +1,20 @@
+//统计一段话的字符数、空格数、 数字数和其他个数
+#include<stdio.h>
+int main()
+{
+	int letters=0,space=0,digit=0,others=0;
+	char s;
+	printf("please input some characters:\n");
+	while((s=getchar())!='\n')
+	{
+		if(s>='a'&&s<='z'||s>='A'&&s<='Z')
+		letters++;
+		else if(s==' ')
+		space++;
+		else if(s>='1'&&s<='9')
+		digit++;
+		else
+		others++;
+	}
+	printf("in this sentence,letters=%d space=%d digit=%d ohters=%d\n",letters,space,digit,others);
+}
