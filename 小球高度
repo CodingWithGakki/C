@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main()
+{
+	float h=100.0;
+	float l;
+	int n;
+	for(n=2;n<=10;n++)
+	{
+		h=h/2;
+		l=l+h;
+	}
+	printf("第10次反弹高度=%f\n",h);
+	printf("共经的米数=%f\n",l);
+}
