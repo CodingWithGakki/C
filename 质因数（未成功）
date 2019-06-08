@@ -1,0 +1,22 @@
+#include<stdio.h>
+int mian()
+{
+	int n,i;
+	printf("please input a unmber:");
+	scanf("%d",&n);
+	printf("分解质因数的结果为:%d",n);
+	for(i=2;i<=n;i++)
+	{
+		while(n!=i)
+		{
+			if(n%i==0)
+			{
+				printf("%d*",i);
+				n=n/i;
+			}
+			else
+			break;
+		}
+	}
+		printf("%d\n",n);
+}
